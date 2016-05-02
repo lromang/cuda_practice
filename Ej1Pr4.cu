@@ -84,8 +84,6 @@ int main(int argc, char* argv[])
     checkCUDAError("kernel invocation");
 
     /* Part 1C: copiar el resultado de nuevo al CPU */
-    cudaMemcpy(a, d_a, sz,  cudaMemcpyDeviceToHost);
-    cudaMemcpy(b, d_b, sz,  cudaMemcpyDeviceToHost);
     cudaMemcpy(c, d_c, sz,  cudaMemcpyDeviceToHost);
 
     checkCUDAError("memcpy");
